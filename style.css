@@ -1,0 +1,316 @@
+/* --- Global Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans Khmer', 'Koulen', sans-serif;
+    background-color: #f0f4f8; /* Professional blue-gray */
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 600px; /* Limit width even on larger screens */
+    margin: 0 auto;
+    padding: 20px 15px; /* Add horizontal padding for phones */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Moul', cursive;
+    color: #004a7c; /* Dark blue */
+    font-size: 2rem; /* Reduced for better mobile fit */
+    margin-bottom: 15px; /* Added some bottom margin */
+}
+
+h3 {
+    font-family: 'Moul', cursive;
+    color: #d9534f;
+    text-align: center;
+    margin-bottom: 15px; /* Reduced for better spacing */
+    font-size: 1.5rem; /* Reduced for better mobile fit */
+}
+
+/* --- Card Design (Professional Look) --- */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 20px; /* Reduced padding slightly */
+    margin-bottom: 20px; /* Reduced margin slightly */
+    transition: all 0.3s ease;
+}
+
+/* --- Selector Card --- */
+.selector-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Reduced gap */
+}
+
+.selector-card label {
+    font-family: 'Koulen', sans-serif;
+    font-size: 1.2rem; /* Reduced for mobile */
+    color: #004a7c;
+    text-align: center;
+}
+
+#day-select {
+    font-family: 'Koulen', sans-serif;
+    font-size: 1.1rem; /* Reduced for mobile */
+    padding: 10px 12px; /* Reduced padding */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none; /* For consistent dropdown appearance across browsers */
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23004a7c%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13.2-5.4H18.2c-5%200-9.3%201.8-13.2%205.4A17.6%2017.6%200%200%000%2082.4c0%204.6%201.8%208.9%205.4%2012.8l128%20127.9c3.9%203.9%208.2%205.4%2012.8%205.4s9.3-1.8%2013.2-5.4L287%2095.1c3.9-3.9%205.4-8.2%205.4-12.8%200-4.6-1.8-8.9-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E'); /* Custom arrow */
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 12px;
+    padding-right: 35px; /* Make space for the custom arrow */
+}
+
+
+#day-select:focus {
+    border-color: #004a7c;
+    outline: none;
+}
+
+/* --- Results Card & Name List --- */
+.results-card {
+    padding-bottom: 20px;
+}
+
+.name-list {
+    list-style-type: none;
+    padding: 0; /* Ensure no default padding */
+}
+
+.name-list li {
+    display: flex;
+    flex-direction: column; /* Stack vertically on phones */
+    align-items: flex-start; /* Align text to the left */
+    gap: 10px; /* Smaller gap between name and buttons */
+    
+    padding: 12px 0; /* Reduced vertical padding, no horizontal here */
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.name-list li:last-child {
+    border-bottom: none;
+}
+
+.name-list li .name {
+    font-family: 'Koulen', sans-serif;
+    font-size: 1.1rem; /* Significantly reduced for mobile */
+    color: #333;
+    width: 100%; /* Ensure name takes full width */
+    text-align: left; /* Align name to left */
+}
+
+.name-list li .buttons {
+    display: grid; /* Use Grid for equal button width */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 8px; /* Smaller gap between buttons */
+    width: 100%; /* Buttons take full width available */
+}
+
+/* --- Buttons Style --- */
+.btn {
+    font-family: 'Koulen', sans-serif;
+    font-size: 0.9rem; /* Reduced button font size for mobile */
+    padding: 8px 10px; /* Reduced button padding */
+    border: none;
+    border-radius: 6px; /* Slightly smaller border radius */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.btn:hover {
+    transform: translateY(-2px); 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-done {
+    background-color: #28a745; 
+    color: white;
+}
+.btn-done:hover {
+    background-color: #218838;
+}
+
+.btn-not-done {
+    background-color: #dc3545; 
+    color: white;
+}
+.btn-not-done:hover {
+    background-color: #c82333;
+}
+
+/* ‼️ STYLE ថ្មីសម្រាប់ប៊ូតុង 'សរុបទិន្នន័យ' */
+.btn-total {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    margin-top: 20px; /* Add space above the button */
+    padding: 12px 15px; /* Make it a bit bigger */
+    font-size: 1.1rem;
+}
+.btn-total:hover {
+    background-color: #0069d9;
+}
+
+
+/* --- Styling for Done/Not Done States --- */
+.name-list li.is-done {
+    background-color: #eaf6ec; 
+}
+.name-list li.is-done .name {
+    text-decoration: line-through;
+    color: #555;
+}
+
+.name-list li.is-not-done {
+    background-color: #fbebee; 
+}
+.name-list li.is-not-done .name {
+    color: #a94442;
+}
+
+/* --- Modal Style --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 15px;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px; /* Slightly smaller border radius */
+    width: 100%;
+    max-width: 350px; /* Slightly smaller max width for modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+    font-family: 'Moul', cursive;
+    color: #333;
+    text-align: center;
+    margin-bottom: 12px; /* Reduced margin */
+    font-size: 1.4rem; /* Reduced font size */
+}
+
+.modal-content textarea {
+    width: 100%;
+    padding: 10px; /* Reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Reduced border radius */
+    margin-bottom: 12px; /* Reduced margin */
+    font-family: 'Noto Sans Khmer', sans-serif;
+    font-size: 0.95rem; /* Reduced font size */
+}
+
+/* ‼️ STYLE ថ្មីសម្រាប់ Textarea ក្នុង Modal សរុប */
+#total-data-output {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    resize: none; /* Don't allow user to resize */
+    font-family: 'Noto Sans Khmer', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+.modal-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px; /* Reduced gap */
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+}
+.btn-cancel {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* --- Media Queries for Larger Screens (Desktop) --- */
+@media (min-width: 600px) {
+    h1 { font-size: 2.8rem; } 
+    h3 { font-size: 1.8rem; } 
+    .selector-card label { font-size: 1.4rem; }
+    #day-select { 
+        font-size: 1.2rem; 
+        padding: 12px 15px;
+        background-position: right 15px center;
+        background-size: 15px;
+        padding-right: 40px;
+    }
+
+    .name-list li {
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0; 
+    }
+
+    .name-list li .name {
+        font-size: 1.3rem; 
+        width: auto; 
+        text-align: left;
+    }
+
+    .name-list li .buttons {
+        width: auto; 
+        display: flex; 
+        gap: 10px; 
+    }
+
+    .btn {
+        font-size: 1rem; 
+        padding: 10px 15px; 
+    }
+
+    .modal-content {
+        padding: 25px;
+        max-width: 400px;
+    }
+    .modal-content h3 { font-size: 1.6rem; }
+    .modal-content textarea { font-size: 1rem; }
+
+    #total-data-output {
+        font-size: 0.95rem;
+    }
+
+    .btn-total {
+        width: auto; /* On desktop, don't make it full width */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

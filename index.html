@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>វេនសម្អាត</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Moul&family=Noto+Sans+Khmer:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>🗓️ វេនសម្អាតប្រចាំសប្តាហ៍</h1>
+        </header>
+
+        <div class="card selector-card">
+            <label for="day-select">សូមជ្រើសរើសថ្ងៃសម្អាត៖</label>
+            <select id="day-select">
+                <option value="">--- ជ្រើសរើសថ្ងៃ ---</option>
+                <option value="tuesday">ថ្ងៃអង្គារ</option>
+                <option value="thursday">ថ្ងៃព្រហស្បតិ៍</option>
+                <option value="saturday">ថ្ងៃសៅរ៍</option>
+            </select>
+        </div>
+
+        <div class="card results-card" id="schedule-display" style="display: none;">
+            <h3 id="schedule-title"></h3>
+            <ul id="data-list" class="name-list">
+                </ul>
+
+            <button id="btn-total-data" class="btn btn-total">📊 សរុបទិន្នន័យ</button>
+
+        </div>
+    </main>
+
+    <div id="reason-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h3>សូមបញ្ជាក់មូលហេតុ</h3>
+            <textarea id="reason-text" rows="4" placeholder="មូលហេតុដែលមិនបានធ្វើ..."></textarea>
+            <div class="modal-buttons">
+                <button id="submit-reason" class="btn btn-submit">បញ្ជូន</button>
+                <button id="close-modal" class="btn btn-cancel">បោះបង់</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="total-data-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <h3 id="total-data-title">ទិន្នន័យសរុប</h3>
+            <textarea id="total-data-output" rows="10" readonly></textarea>
+            <div class="modal-buttons">
+                <button id="btn-copy-data" class="btn btn-submit">ចម្លងទិន្នន័យ</button>
+                <button id="btn-close-total-modal" class="btn btn-cancel">បិទ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
